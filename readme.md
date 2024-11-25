@@ -50,7 +50,26 @@ Las siguientes herramientas deben estar instaladas
 
 ## Vulnerabilidades
 
+### No valida firma
+
+[Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature)
+
+### alg none
+
+[Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)
+
+### Claves debiles
+
+[Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-signing-key)
+
+### jwk injection
+
+[Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-jwk-header-injection)
+
+
 ### Key confusion attack
+
+Este ataque se aprovecha que algunas librerias usan siempre el algoritmo que viene en el Header par validar los tokens, entonces se cambia el algoritmo de cifrado desde uno asincronico como el RS256 a uno sincronico como es el HS256, basicamente el sistema deberia validar el token con la clave publica siempre, entonces firmamos el jwt con el algoritmo sincronico y usamos la misma clave publica (de validacion) para firmar el token.
 
 #### Taller:
 

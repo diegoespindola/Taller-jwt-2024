@@ -52,17 +52,25 @@ Las siguientes herramientas deben estar instaladas
 
 ### No valida firma
 
+Este ataque aprovecha que algunas implementaciones de librerias de JWT tienen distintos metodos para validar el token y obtener los claims, entonces algunos desarroladores obtienen los claims antes de validar la firma del token.
+
 [Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-unverified-signature)
 
 ### alg none
+
+Esta vulnerabilidad se aprovecha que algunas implementaciones utilizan siempre el algoritmo indicado en la cabecera para validar el token. 
 
 [Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-flawed-signature-verification)
 
 ### Claves debiles
 
+Un token con una clave debil puede ser facilmente falsificado, obteniendo la clave por fuerza bruta.
+
 [Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-weak-signing-key)
 
 ### jwk injection
+
+Inyectaremos la clave para validar el token directamente en el header del token
 
 [Laboratorio](https://portswigger.net/web-security/jwt/lab-jwt-authentication-bypass-via-jwk-header-injection)
 
@@ -100,4 +108,4 @@ Este ataque se aprovecha que algunas librerias usan siempre el algoritmo que vie
 	- Le damos a Send.
 	- si encontramos en el response el texto "Your username is: administrator"entonces nuestro tokenfunciono ok.
 
-Para usar el token y resolver el laboratorios creamos 2 reglas en "match & replace" de CAIDO, donde reemplazaremos automaticamente el token real por el nuestro y reemplazaremos automaticamente el nombre de usuario de "wiener" por "administrator" y luego navegamos desde el chrome de CAIDO.
+- Para usar el token y resolver el laboratorios creamos 2 reglas en "match & replace" de CAIDO, donde reemplazaremos automaticamente el token real por el nuestro y reemplazaremos automaticamente el nombre de usuario de "wiener" por "administrator" y luego navegamos desde el chrome de CAIDO.

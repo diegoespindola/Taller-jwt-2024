@@ -34,9 +34,10 @@ Las siguientes herramientas deben estar instaladas
 
 - #### Python3
 
-	Instaslaremos Python 3 segun las siguientes [instrucciones](https://www.python.org/downloads/)
+	Instalaremos Python 3 segun las siguientes [instrucciones](https://www.python.org/downloads/)
 
-- #### Dirb
+- #### Ffuf
+	instalaremos Ffuf segun las instrucciones en la url <https://github.com/ffuf/ffuf>
 
 
 - #### JWT-TOOL 
@@ -60,7 +61,7 @@ Las siguientes herramientas deben estar instaladas
 - Buscamos el token entregado por el servidor, vemos que usa KID si tenemos suerte  deberia haber un archivo con la clave publica con ese id.
 - Usamos dirb para ver si hay algun archivo esta expuesto con las claves publicas 
 
-	`dirb https://lab1.web-security-academy.net/ ~/tools/diccionarios/SecLists/Discovery/Web-Content/common.txt `
+	`ffuf -u https://lab1.web-security-academy.net/FUZZ -w ~/tools/diccionarios/SecLists/Discovery/Web-Content/common.txt -mc 200`
 
 - Con lo anterior descubrimos un archivo https://lab1.web-security-academy.net/jwks.json
 

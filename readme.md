@@ -1,8 +1,10 @@
 # Taller de Vulnerabilidades en jwt
 
-Un taller mas sobre vulnerabilidades en JWT, este es practico, paso a paso y en español pero sin BurpSuite.
+Un taller mas sobre vulnerabilidades en JWT, este es practico, paso a paso y en español.
 
-Toda la teoria y conocimientos previos van a ser explicados en la charla en vivo. sera agregada luego.
+Toda la teoria y conocimientos previos van a ser explicados en el taller en vivo. 
+
+Resolveremos los laboratorios de Portswigger Academy pero sin BurpSuite.
 
 ## Laboratorio
 
@@ -25,9 +27,6 @@ Usaremos un archivo de la coleccion  [SecLists](https://github.com/danielmiessle
 Usaremos el archivo de claves filtradas de jwt [jwt-secrets](https://github.com/wallarm/jwt-secrets/) de Wallarm.
 
 `git clone https://github.com/wallarm/jwt-secrets.git`
-
-
-
 
 
 ### Herramientas
@@ -83,7 +82,7 @@ Un token con una clave debil puede ser facilmente falsificado, obteniendo la cla
 
 - Navegar a la url del lab
 - Obtener el jwt desde CAIDO
-- Usar un ataque de  diccionario para obtener la clave del jwt
+- Usar un ataque de  diccionario para obtener la clave publica del jwt
 
 
 	`hashcat -a 0 -m 16500 <TOKEN> ../jwt-secrets/jwt.secrets.list --show`

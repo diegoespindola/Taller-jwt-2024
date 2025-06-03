@@ -2,9 +2,9 @@
 
 Un taller mas sobre vulnerabilidades en JWT, este es practico, paso a paso y en español.
 
-Toda la teoria y conocimientos previos van a ser explicados en el taller en vivo. 
+Toda la teoria y conocimientos previos seran explicados en el taller en vivo. 
 
-Resolveremos los laboratorios de Portswigger Academy pero sin BurpSuite.
+Resolveremos los laboratorios de JWT de Portswigger Academy pero sin BurpSuite.
 
 ## Laboratorio
 
